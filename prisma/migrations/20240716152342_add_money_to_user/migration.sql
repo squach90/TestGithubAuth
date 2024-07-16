@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "users" ADD COLUMN     "money" DOUBLE PRECISION DEFAULT 0;
