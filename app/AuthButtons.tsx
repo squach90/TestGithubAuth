@@ -1,11 +1,18 @@
 "use client";
 
 import { signIn, signOut } from "next-auth/react";
+import { Button } from "@/components/ui/button";
+import Icon from "@mdi/react";
+import { mdiGithub } from "@mdi/js";
 
 export const LoginButton = () => {
-  return <button onClick={() => signIn()}>Login</button>;
+  return (
+    <Button onClick={() => signIn()}>
+      Login with Github &nbsp; <Icon path={mdiGithub} size={1} />
+    </Button>
+  );
 };
 
 export const LogoutButton = () => {
-  return <button onClick={() => signOut()}>Logout</button>;
+  return <Button onClick={() => signOut()}>Logout</Button>;
 };
